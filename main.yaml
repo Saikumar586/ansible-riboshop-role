@@ -1,5 +1,5 @@
 - name: installing ansible roboshop
-  hosts: mongodb
+  hosts: {{component}}
   become: yes
-  roles:
-  - mongodb
+  roles: 
+  - {{component}}
