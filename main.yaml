@@ -1,4 +1,4 @@
-- name: installing yaml file
+- name: installing ansible roboshop
   hosts: mongodb
   become: yes
   roles:
