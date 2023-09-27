@@ -1,9 +1,13 @@
-- name: Install NodeJS
+# i need to refer common folder mentioned tasks here.
+#defined server called one role  like catalogue.
+# common also anoher role..
+# here we need to import mentioned catalogue tasks here... like nodejs.yaml
+- name: install nodejs
   ansible.builtin.import_role:
     name: common
-    state: installed
+    tasks_from: nodejs 
 
-- name: setup application 
+- name: setup app
   ansible.builtin.import_role:
     name: common
-    state: installed
+    tasks_from: setup-app
