@@ -4,9 +4,9 @@
       dest: /etc/yum.repos.d/mongo.repo
 
 - name: Install MongoDB
-    ansible.builtin.yum:
+  ansible.builtin.yum:
       name: mongodb-org-shell
       state: installed
 
 - name: load {{component}} data
-    ansible.builtin.command: mongo --host mongodb.saidev.world < /app/schema/{{component}}.js
+  ansible.builtin.command: mongo --host mongodb.saidev.world < /app/schema/{{component}}.js
