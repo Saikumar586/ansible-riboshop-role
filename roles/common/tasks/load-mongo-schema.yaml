@@ -9,7 +9,7 @@
       state: installed
 
 - name: load {{component}} data
-  ansible.builtin.command: mongo --host mongodb.saidev.world < /app/schema/{{component}}.js
+  ansible.builtin.command: mongo --host mongodb.saidev.world </app/schema/{{component}}.js
 
 
 
