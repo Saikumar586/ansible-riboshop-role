@@ -8,6 +8,6 @@
       name: mongodb-org-shell
       state: installed
 
-- name: load cart data
-  ansible.builtin.command: mongo --host mongodb.saidev.world < /app/schema/"cart.js"
+# - name: load {{component}} data
+#   ansible.builtin.command: mongo --host mongodb.saidev.world < /app/schema/"{{component}}.js"
 
