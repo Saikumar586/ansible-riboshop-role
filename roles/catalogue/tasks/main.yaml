@@ -17,6 +17,11 @@
   args:
      chdir: /app
 
+- name: copy mongo repo to yum.repos.d
+  ansible.builtin.copy:
+    src: mongodb.repo
+    dest: /etc/yum.repos.d/mongo.repo
+
 - name: load schema
   ansible.builtin.import_role:
     name: common
