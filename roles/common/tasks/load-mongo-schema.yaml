@@ -1,6 +1,6 @@
 - name: copy mongo repo to yum.repos.d
   ansible.builtin.copy:
-      src: mongodb.repo
+      src: H:\devopstools\repos\ansible-roboshop-role\roles\common\file\mongodb.repo
       dest: /etc/yum.repos.d/mongo.repo
       remote_src: yes
 
