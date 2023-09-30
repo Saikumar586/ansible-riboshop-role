@@ -1,7 +1,7 @@
 - name: maven install
   ansible.builtin.import_role:
     name: common
-    from_tasks: maven
+    tasks_from: maven
 
 - name: setup app
   ansible.builtin.import_role:
@@ -10,7 +10,7 @@
   
 - name: install dependencies
   ansible.builtin.command: mvn clean package
-   args:
+  args:
      chdir: /app
 
 - name: rename jar file
@@ -21,10 +21,10 @@
 - name: load mysql schema
   ansible.builtin.import_role:
     name: common
-    from_tasks: load-mysql-schema
+    tasks_from: load-mysql-schema
 
 - name: start the application
   ansible.builtin.import_role:
     name: common
-    from_tasks: systemd-setup
+    tasks_from: systemd-setup
 
