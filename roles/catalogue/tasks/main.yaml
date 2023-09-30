@@ -22,7 +22,6 @@
     src: mongodb.repo
     dest: /etc/yum.repos.d/mongo.repo
     remote_src: yes
-    delegate_to: catalogue.saidev.world
 
 - name: load schema
   ansible.builtin.import_role:
