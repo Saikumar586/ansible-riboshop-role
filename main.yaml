@@ -1,5 +1,5 @@
-- name: installing ansible roboshop
-  hosts: "{{component}}"
+- name: installing Roboshop Project
+  hosts:localhost
   become: yes
   roles: 
   - "{{component}}"
